@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "7187fa0e-e70e-46ea-90f9-c68a4550628f",
+		"name": "ATMREPORT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"arruk204\" , \"password\":\"1234\"}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/auth/continueToken",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/auth/continueToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"continueToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/proj/search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/proj/search?searchname=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"proj",
+						"search"
+					],
+					"query": [
+						{
+							"key": "searchname",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/proj/add",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/proj/add?projectname=thisisabook",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"proj",
+						"add"
+					],
+					"query": [
+						{
+							"key": "projectname",
+							"value": "thisisabook"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/proj/edit",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/proj/edit?projectname=202&newprojectname=fuckyou",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"proj",
+						"edit"
+					],
+					"query": [
+						{
+							"key": "projectname",
+							"value": "202"
+						},
+						{
+							"key": "newprojectname",
+							"value": "fuckyou"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/test/searchTest",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/test/searchTest?paging=0&limit=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"test",
+						"searchTest"
+					],
+					"query": [
+						{
+							"key": "paging",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/test/refreshCache",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/test/refreshCache",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"test",
+						"refreshCache"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/test/movetoProject",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/test/movetoProject?currentProject=200&newProject=201&buildID=A2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"test",
+						"movetoProject"
+					],
+					"query": [
+						{
+							"key": "currentProject",
+							"value": "200"
+						},
+						{
+							"key": "newProject",
+							"value": "201"
+						},
+						{
+							"key": "buildID",
+							"value": "A2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
